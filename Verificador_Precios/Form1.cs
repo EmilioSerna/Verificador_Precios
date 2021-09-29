@@ -28,6 +28,7 @@ namespace Verificador_Precios
             label1.ForeColor = ColorTranslator.FromHtml("#FFD859");
             label4.ForeColor = ColorTranslator.FromHtml("#FFD859");
             label5.ForeColor = ColorTranslator.FromHtml("#FFD859");
+            label6.ForeColor = ColorTranslator.FromHtml("#FFD859");
 
             pictureBox1.Location = new Point(this.Width / 2 - pictureBox1.Width / 2, this.Height / 4 - pictureBox1.Height);
             label1.Location = new Point(this.Width / 2 - label1.Width / 2, this.Height / 3 - pictureBox1.Height / 3);
@@ -35,9 +36,11 @@ namespace Verificador_Precios
             pictureBox2.Location = new Point(this.Width / 2 - pictureBox2.Width / 2, this.Height / 2 + pictureBox1.Height);
             pictureBox3.Location = new Point(this.Width / 5 - pictureBox3.Width / 2, this.Height / 2 - pictureBox3.Height / 2);
             label4.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 - pictureBox3.Height / 2 - 60);
-            label2.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 - label4.Height);
+            label2.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 - label4.Height - 80);
+            label5.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 + pictureBox3.Height / 2);
 
             PriceWindowVisible(false);
+            ErrorWindowVisible(false);
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -68,13 +71,15 @@ namespace Verificador_Precios
                     if (result.HasRows)
                     {
                         result.Read();
+                        string producto = result.GetString(0);
+                        string precio = result.GetString(1);
+                        pictureBox3.ImageLocation = result.GetString(2);
+
                         MainWindowVisible(false);
                         PriceWindowVisible(true);
 
-                        label2.Text = $"{result.GetString(0)}\n" +
-                            $"Precio: ${result.GetString(1)}";
-                        pictureBox3.ImageLocation = result.GetString(2);
-                        pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+                        label2.Text = $"{producto}";
+                        label5.Text = $"Precio: ${precio}";
 
                         segundos = 0;
                         timer1.Enabled = true;
@@ -122,6 +127,12 @@ namespace Verificador_Precios
             label4.Visible = option;
             label2.Visible = option;
             label5.Visible = option;
+        }
+
+        private void ErrorWindowVisible(bool option)
+        {
+            label6.Visible = option;
+            label7.Visible = option;
         }
     }
 }
