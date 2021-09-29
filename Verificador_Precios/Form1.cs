@@ -64,7 +64,9 @@ namespace Verificador_Precios
                     if (result.HasRows)
                     {
                         result.Read();
-                        //MessageBox.Show(result.GetString(1));
+                        pictureBox1.Visible = false;
+                        label1.Visible = false;
+                        label3.Visible = false;
                         pictureBox2.Visible = false;
                         label2.Visible = true;
                         label2.Text = $"{result.GetString(0)}\n" +
@@ -100,7 +102,10 @@ namespace Verificador_Precios
             if (segundos == 4)
             {
                 timer1.Enabled = false;
+                pictureBox1.Visible = true;
                 pictureBox2.Visible = true;
+                label1.Visible = true;
+                label3.Visible = true;
                 pictureBox3.Visible = false;
                 label2.Text = "";
             }
