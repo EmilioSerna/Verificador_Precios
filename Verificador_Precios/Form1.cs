@@ -38,6 +38,8 @@ namespace Verificador_Precios
             label4.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 - pictureBox3.Height / 2 - 60);
             label2.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 - label4.Height - 80);
             label5.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 + pictureBox3.Height / 2);
+            label6.Location = new Point(this.Width / 2 - label6.Width / 2, this.Height / 5 - label6.Height);
+            label7.Location = new Point(this.Width / 2 - label7.Width / 2, this.Height / 5 - label6.Height / 2);
 
             PriceWindowVisible(false);
             ErrorWindowVisible(false);
@@ -76,6 +78,7 @@ namespace Verificador_Precios
                         pictureBox3.ImageLocation = result.GetString(2);
 
                         MainWindowVisible(false);
+                        ErrorWindowVisible(false);
                         PriceWindowVisible(true);
 
                         label2.Text = $"{producto}";
@@ -86,7 +89,15 @@ namespace Verificador_Precios
                     }
                     else
                     {
-                        MessageBox.Show("Consulte con un empleado, el producto solicitado no fue encontrado.");
+                        label7.Text = "Hubo un error al realizar el escaneo\n\n" +
+                        "Inténtalo de nuevo o avisa a un\nempleadode la sucursal para\n" +
+                        "solicitar ayuda";
+                        MainWindowVisible(false);
+                        PriceWindowVisible(false);
+                        ErrorWindowVisible(true);
+
+                        segundos = 0;
+                        timer1.Enabled = true;
                     }
                 }
                 catch (Exception mysql_error)
@@ -110,6 +121,7 @@ namespace Verificador_Precios
                 timer1.Enabled = false;
                 MainWindowVisible(true);
                 PriceWindowVisible(false);
+                ErrorWindowVisible(false);
             }
         }
 
