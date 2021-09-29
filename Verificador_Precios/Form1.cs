@@ -24,7 +24,9 @@ namespace Verificador_Precios
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(this.Width / 2 - pictureBox1.Width / 2, this.Height / 3 - pictureBox1.Height / 3);
+            this.BackColor = ColorTranslator.FromHtml("#007A29");
+            label1.ForeColor = ColorTranslator.FromHtml("#FFD859");
+            pictureBox1.Location = new Point(this.Width / 2 - pictureBox1.Width / 2, this.Height / 6 - pictureBox1.Height);
             label1.Location = new Point(this.Width / 2 - label1.Width / 2, this.Height / 2 - pictureBox1.Height / 2);
             pictureBox2.Location = new Point(this.Width / 2 - pictureBox2.Width / 2, this.Height / 2 + pictureBox1.Height / 3);
             label2.Location = new Point(this.Width / 2 - label2.Width / 2, this.Height / 2 + pictureBox1.Height / 3);
