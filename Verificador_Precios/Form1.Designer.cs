@@ -152,6 +152,7 @@ namespace Verificador_Precios
             this.label6.Size = new System.Drawing.Size(982, 235);
             this.label6.TabIndex = 8;
             this.label6.Text = "Lo sentimos";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -170,7 +171,7 @@ namespace Verificador_Precios
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
-            this.ClientSize = new System.Drawing.Size(2730, 1100);
+            this.ClientSize = new System.Drawing.Size(2320, 1100);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

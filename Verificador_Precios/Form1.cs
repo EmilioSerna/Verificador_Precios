@@ -38,8 +38,8 @@ namespace Verificador_Precios
             label4.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 - pictureBox3.Height / 2 - 60);
             label2.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 - label4.Height - 80);
             label5.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 + pictureBox3.Height / 2);
-            label6.Location = new Point(this.Width / 2 - label6.Width / 2, this.Height / 5 - label6.Height);
-            label7.Location = new Point(this.Width / 2 - label7.Width / 2, this.Height / 5 - label6.Height / 2);
+            label6.Location = new Point(this.Width / 2 - label6.Width / 2, this.Height / 4 - label6.Height);
+            label7.Location = new Point(this.Width / 2 - label1.Width / 2, this.Height / 3 - label7.Height / 2);
 
             PriceWindowVisible(false);
             ErrorWindowVisible(false);
