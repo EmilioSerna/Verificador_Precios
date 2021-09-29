@@ -26,9 +26,10 @@ namespace Verificador_Precios
         {
             this.BackColor = ColorTranslator.FromHtml("#007A29");
             label1.ForeColor = ColorTranslator.FromHtml("#FFD859");
-            pictureBox1.Location = new Point(this.Width / 2 - pictureBox1.Width / 2, this.Height / 6 - pictureBox1.Height);
-            label1.Location = new Point(this.Width / 2 - label1.Width / 2, this.Height / 2 - pictureBox1.Height / 2);
-            pictureBox2.Location = new Point(this.Width / 2 - pictureBox2.Width / 2, this.Height / 2 + pictureBox1.Height / 3);
+            pictureBox1.Location = new Point(this.Width / 2 - pictureBox1.Width / 2, this.Height / 4 - pictureBox1.Height);
+            label1.Location = new Point(this.Width / 2 - label1.Width / 2, this.Height / 3 - pictureBox1.Height / 3);
+            label3.Location = new Point(this.Width / 2 - label3.Width / 2, this.Height / 3 - pictureBox1.Height / 3 + label1.Height);
+            pictureBox2.Location = new Point(this.Width / 2 - pictureBox2.Width / 2, this.Height / 2 + pictureBox1.Height);
             label2.Location = new Point(this.Width / 2 - label2.Width / 2, this.Height / 2 + pictureBox1.Height / 3);
             label2.Visible = false;
             pictureBox3.Location = new Point(label2.Width, this.Height / 2 + pictureBox1.Height / 3 - label2.Height);

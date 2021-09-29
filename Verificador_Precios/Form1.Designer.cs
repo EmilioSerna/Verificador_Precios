@@ -38,6 +38,7 @@ namespace Verificador_Precios
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,11 +48,11 @@ namespace Verificador_Precios
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Heebo", 99.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Bisque;
+            this.label1.Font = new System.Drawing.Font("Heebo", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Khaki;
             this.label1.Location = new System.Drawing.Point(137, 233);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1006, 195);
+            this.label1.Size = new System.Drawing.Size(1214, 235);
             this.label1.TabIndex = 1;
             this.label1.Text = "Checa el precio";
             // 
@@ -59,7 +60,7 @@ namespace Verificador_Precios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(896, 441);
+            this.label2.Location = new System.Drawing.Point(903, 553);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 31);
             this.label2.TabIndex = 3;
@@ -73,7 +74,7 @@ namespace Verificador_Precios
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Verificador_Precios.Properties.Resources.image_placeholder;
-            this.pictureBox3.Location = new System.Drawing.Point(201, 471);
+            this.pictureBox3.Location = new System.Drawing.Point(208, 583);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(139, 107);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -84,9 +85,9 @@ namespace Verificador_Precios
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(495, 414);
+            this.pictureBox2.Location = new System.Drawing.Point(553, 496);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(280, 175);
+            this.pictureBox2.Size = new System.Drawing.Size(288, 252);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -95,18 +96,31 @@ namespace Verificador_Precios
             // 
             this.pictureBox1.BackgroundImage = global::Verificador_Precios.Properties.Resources.logo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(355, 101);
+            this.pictureBox1.Location = new System.Drawing.Point(313, 84);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(584, 129);
+            this.pictureBox1.Size = new System.Drawing.Size(744, 162);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Heebo", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(29, 385);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1592, 118);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Pasando el código de barras bajo el sensor";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
-            this.ClientSize = new System.Drawing.Size(1318, 760);
+            this.ClientSize = new System.Drawing.Size(1385, 920);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
@@ -137,6 +151,7 @@ namespace Verificador_Precios
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
