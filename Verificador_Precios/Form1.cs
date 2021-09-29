@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -16,8 +17,12 @@ namespace Verificador_Precios
 
         private int segundos = 0;
         private static string codigo = "";
+        // Muchas gracias Octavio por este trucazo
+        private static string connectionString = ConfigurationManager.ConnectionStrings["verificadorPreciosDB"].ConnectionString;
+        private static string database = "verificador_precios";
+        private static string table = "productos";
 
-        public Form1()
+    public Form1()
         {
             InitializeComponent();
         }
@@ -51,53 +56,43 @@ namespace Verificador_Precios
             {
                 try
                 {
-                    MySqlConnection servidor = new MySqlConnection(
-                        "server=localhost;" +
-                        "user=root;" +
-                        "password=;" +
-                        "database=verificador_precios;" +
-                        "SSL Mode=None");
-
-                    servidor.Open();
-
-                    string query = "SELECT " +
-                        "producto_nombre, producto_precio, producto_imagen " +
-                        "FROM " +
-                        "verificador_precios.productos " +
-                        "WHERE " +
-                        $"producto_codigo = '{codigo}';";
-
-                    MySqlCommand commandQuery = new MySqlCommand(query, servidor);
-                    MySqlDataReader result = commandQuery.ExecuteReader();
-
-                    if (result.HasRows)
+                    using (MySqlConnection servidor = new MySqlConnection(connectionString))
                     {
-                        result.Read();
-                        string producto = result.GetString(0);
-                        string precio = result.GetString(1);
-                        pictureBox3.ImageLocation = result.GetString(2);
+                        servidor.Open();
 
-                        MainWindowVisible(false);
-                        ErrorWindowVisible(false);
-                        PriceWindowVisible(true);
+                        string query = "SELECT producto_nombre, producto_precio, producto_imagen FROM " +
+                            $"{database}.{table} " +
+                            $"WHERE producto_codigo = '{codigo}';";
 
-                        label2.Text = $"{producto}";
-                        label5.Text = $"Precio: ${precio}";
+                        MySqlDataReader result = new MySqlCommand(query, servidor).ExecuteReader();
 
-                        segundos = 0;
-                        timer1.Enabled = true;
-                    }
-                    else
-                    {
-                        label7.Text = "Hubo un error al realizar el escaneo\n\n" +
-                        "Inténtalo de nuevo o avisa a un\nempleadode la sucursal para\n" +
-                        "solicitar ayuda";
-                        MainWindowVisible(false);
-                        PriceWindowVisible(false);
-                        ErrorWindowVisible(true);
+                        if (result.HasRows)
+                        {
+                            result.Read();
 
-                        segundos = 0;
-                        timer1.Enabled = true;
+                            pictureBox3.ImageLocation = result.GetString(2);
+                            label2.Text = $"{result.GetString(0)}";
+                            label5.Text = $"Precio: ${result.GetString(1)}";
+
+                            MainWindowVisible(false);
+                            ErrorWindowVisible(false);
+                            PriceWindowVisible(true);
+
+                            segundos = 0;
+                            timer1.Enabled = true;
+                        }
+                        else
+                        {
+                            label7.Text = "Hubo un error al realizar el escaneo\n\n" +
+                            "Inténtalo de nuevo o avisa a un\nempleadode la sucursal para\n" +
+                            "solicitar ayuda";
+                            MainWindowVisible(false);
+                            PriceWindowVisible(false);
+                            ErrorWindowVisible(true);
+
+                            segundos = 0;
+                            timer1.Enabled = true;
+                        }
                     }
                 }
                 catch (Exception mysql_error)
@@ -136,6 +131,7 @@ namespace Verificador_Precios
         private void PriceWindowVisible(bool option)
         {
             pictureBox3.Visible = option;
+            pictureBox3.Image = Verificador_Precios.Properties.Resources.image_placeholder;
             label4.Visible = option;
             label2.Visible = option;
             label5.Visible = option;
