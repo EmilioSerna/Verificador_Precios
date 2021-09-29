@@ -30,21 +30,21 @@ namespace Verificador_Precios
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml("#007A29");
-            label1.ForeColor = ColorTranslator.FromHtml("#FFD859");
-            label4.ForeColor = ColorTranslator.FromHtml("#FFD859");
-            label5.ForeColor = ColorTranslator.FromHtml("#FFD859");
-            label6.ForeColor = ColorTranslator.FromHtml("#FFD859");
+            labelTitle.ForeColor = ColorTranslator.FromHtml("#FFD859");
+            labelProductName.ForeColor = ColorTranslator.FromHtml("#FFD859");
+            labelProductPrice.ForeColor = ColorTranslator.FromHtml("#FFD859");
+            labelErrorTitle.ForeColor = ColorTranslator.FromHtml("#FFD859");
 
-            pictureBox1.Location = new Point(this.Width / 2 - pictureBox1.Width / 2, this.Height / 4 - pictureBox1.Height);
-            label1.Location = new Point(this.Width / 2 - label1.Width / 2, this.Height / 3 - pictureBox1.Height / 3);
-            label3.Location = new Point(this.Width / 2 - label3.Width / 2, this.Height / 3 - pictureBox1.Height / 3 + label1.Height);
-            pictureBox2.Location = new Point(this.Width / 2 - pictureBox2.Width / 2, this.Height / 2 + pictureBox1.Height);
-            pictureBox3.Location = new Point(this.Width / 5 - pictureBox3.Width / 2, this.Height / 2 - pictureBox3.Height / 2);
-            label4.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 - pictureBox3.Height / 2 - 60);
-            label2.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 - label4.Height - 80);
-            label5.Location = new Point(this.Width / 2 - pictureBox3.Width / 2 - 30, this.Height / 2 + pictureBox3.Height / 2);
-            label6.Location = new Point(this.Width / 2 - label6.Width / 2, this.Height / 4 - label6.Height);
-            label7.Location = new Point(this.Width / 2 - label1.Width / 2, this.Height / 3 - label7.Height / 2);
+            pictureLogo.Location = new Point(this.Width / 2 - pictureLogo.Width / 2, this.Height / 4 - pictureLogo.Height);
+            labelTitle.Location = new Point(this.Width / 2 - labelTitle.Width / 2, this.Height / 3 - pictureLogo.Height / 3);
+            labelText.Location = new Point(this.Width / 2 - labelText.Width / 2, this.Height / 3 - pictureLogo.Height / 3 + labelTitle.Height);
+            pictureCodebar.Location = new Point(this.Width / 2 - pictureCodebar.Width / 2, this.Height / 2 + pictureLogo.Height);
+            pictureProduct.Location = new Point(this.Width / 5 - pictureProduct.Width / 2, this.Height / 2 - pictureProduct.Height / 2);
+            labelProductName.Location = new Point(this.Width / 2 - pictureProduct.Width / 2 - 30, this.Height / 2 - pictureProduct.Height / 2 - 60);
+            labelProductDesc.Location = new Point(this.Width / 2 - pictureProduct.Width / 2 - 30, this.Height / 2 - labelProductName.Height - 80);
+            labelProductPrice.Location = new Point(this.Width / 2 - pictureProduct.Width / 2 - 30, this.Height / 2 + pictureProduct.Height / 2);
+            labelErrorTitle.Location = new Point(this.Width / 2 - labelErrorTitle.Width / 2, this.Height / 4 - labelErrorTitle.Height);
+            labelErrorText.Location = new Point(this.Width / 2 - labelTitle.Width / 2, this.Height / 3 - labelErrorText.Height / 2);
 
             PriceWindowVisible(false);
             ErrorWindowVisible(false);
@@ -70,9 +70,9 @@ namespace Verificador_Precios
                         {
                             result.Read();
 
-                            pictureBox3.ImageLocation = result.GetString(2);
-                            label2.Text = $"{result.GetString(0)}";
-                            label5.Text = $"Precio: ${result.GetString(1)}";
+                            pictureProduct.ImageLocation = result.GetString(2);
+                            labelProductDesc.Text = $"{result.GetString(0)}";
+                            labelProductPrice.Text = $"Precio: ${result.GetString(1)}";
 
                             MainWindowVisible(false);
                             ErrorWindowVisible(false);
@@ -83,7 +83,7 @@ namespace Verificador_Precios
                         }
                         else
                         {
-                            label7.Text = "Hubo un error al realizar el escaneo\n\n" +
+                            labelErrorText.Text = "Hubo un error al realizar el escaneo\n\n" +
                             "Inténtalo de nuevo o avisa a un\nempleadode la sucursal para\n" +
                             "solicitar ayuda";
                             MainWindowVisible(false);
@@ -122,25 +122,25 @@ namespace Verificador_Precios
 
         private void MainWindowVisible(bool option)
         {
-            pictureBox1.Visible = option;
-            label1.Visible = option;
-            label3.Visible = option;
-            pictureBox2.Visible = option;
+            pictureLogo.Visible = option;
+            labelTitle.Visible = option;
+            labelText.Visible = option;
+            pictureCodebar.Visible = option;
         }
 
         private void PriceWindowVisible(bool option)
         {
-            pictureBox3.Visible = option;
-            pictureBox3.Image = Verificador_Precios.Properties.Resources.image_placeholder;
-            label4.Visible = option;
-            label2.Visible = option;
-            label5.Visible = option;
+            pictureProduct.Visible = option;
+            pictureProduct.Image = Verificador_Precios.Properties.Resources.image_placeholder;
+            labelProductName.Visible = option;
+            labelProductDesc.Visible = option;
+            labelProductPrice.Visible = option;
         }
 
         private void ErrorWindowVisible(bool option)
         {
-            label6.Visible = option;
-            label7.Visible = option;
+            labelErrorTitle.Visible = option;
+            labelErrorText.Visible = option;
         }
     }
 }

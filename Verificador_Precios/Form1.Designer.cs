@@ -32,139 +32,139 @@ namespace Verificador_Precios
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelProductDesc = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureProduct = new System.Windows.Forms.PictureBox();
+            this.pictureCodebar = new System.Windows.Forms.PictureBox();
+            this.pictureLogo = new System.Windows.Forms.PictureBox();
+            this.labelText = new System.Windows.Forms.Label();
+            this.labelProductName = new System.Windows.Forms.Label();
+            this.labelProductPrice = new System.Windows.Forms.Label();
+            this.labelErrorTitle = new System.Windows.Forms.Label();
+            this.labelErrorText = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCodebar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Heebo", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Khaki;
-            this.label1.Location = new System.Drawing.Point(137, 233);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1214, 235);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Checa el precio";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("Heebo", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.Khaki;
+            this.labelTitle.Location = new System.Drawing.Point(137, 233);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(1214, 235);
+            this.labelTitle.TabIndex = 1;
+            this.labelTitle.Text = "Checa el precio";
             // 
-            // label2
+            // labelProductDesc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Heebo", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(563, 751);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(788, 98);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Descripción del producto";
+            this.labelProductDesc.AutoSize = true;
+            this.labelProductDesc.Font = new System.Drawing.Font("Heebo", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProductDesc.ForeColor = System.Drawing.Color.White;
+            this.labelProductDesc.Location = new System.Drawing.Point(563, 751);
+            this.labelProductDesc.Name = "labelProductDesc";
+            this.labelProductDesc.Size = new System.Drawing.Size(788, 98);
+            this.labelProductDesc.TabIndex = 3;
+            this.labelProductDesc.Text = "Descripción del producto";
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox3
+            // pictureProduct
             // 
-            this.pictureBox3.Image = global::Verificador_Precios.Properties.Resources.image_placeholder;
-            this.pictureBox3.Location = new System.Drawing.Point(30, 600);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(527, 479);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.pictureProduct.Image = global::Verificador_Precios.Properties.Resources.image_placeholder;
+            this.pictureProduct.Location = new System.Drawing.Point(30, 600);
+            this.pictureProduct.Name = "pictureProduct";
+            this.pictureProduct.Size = new System.Drawing.Size(527, 479);
+            this.pictureProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureProduct.TabIndex = 4;
+            this.pictureProduct.TabStop = false;
             // 
-            // pictureBox2
+            // pictureCodebar
             // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(553, 496);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(288, 252);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pictureCodebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureCodebar.Image = ((System.Drawing.Image)(resources.GetObject("pictureCodebar.Image")));
+            this.pictureCodebar.Location = new System.Drawing.Point(553, 496);
+            this.pictureCodebar.Name = "pictureCodebar";
+            this.pictureCodebar.Size = new System.Drawing.Size(288, 252);
+            this.pictureCodebar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureCodebar.TabIndex = 2;
+            this.pictureCodebar.TabStop = false;
             // 
-            // pictureBox1
+            // pictureLogo
             // 
-            this.pictureBox1.BackgroundImage = global::Verificador_Precios.Properties.Resources.logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(313, 84);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(744, 162);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureLogo.BackgroundImage = global::Verificador_Precios.Properties.Resources.logo;
+            this.pictureLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureLogo.Location = new System.Drawing.Point(313, 84);
+            this.pictureLogo.Name = "pictureLogo";
+            this.pictureLogo.Size = new System.Drawing.Size(744, 162);
+            this.pictureLogo.TabIndex = 0;
+            this.pictureLogo.TabStop = false;
             // 
-            // label3
+            // labelText
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Heebo", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 385);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1592, 118);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Pasando el código de barras bajo el sensor";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelText.AutoSize = true;
+            this.labelText.Font = new System.Drawing.Font("Heebo", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelText.ForeColor = System.Drawing.Color.White;
+            this.labelText.Location = new System.Drawing.Point(29, 385);
+            this.labelText.Name = "labelText";
+            this.labelText.Size = new System.Drawing.Size(1592, 118);
+            this.labelText.TabIndex = 5;
+            this.labelText.Text = "Pasando el código de barras bajo el sensor";
+            this.labelText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // labelProductName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Heebo", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Khaki;
-            this.label4.Location = new System.Drawing.Point(564, 617);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(809, 118);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Nombre del producto";
+            this.labelProductName.AutoSize = true;
+            this.labelProductName.Font = new System.Drawing.Font("Heebo", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProductName.ForeColor = System.Drawing.Color.Khaki;
+            this.labelProductName.Location = new System.Drawing.Point(564, 617);
+            this.labelProductName.Name = "labelProductName";
+            this.labelProductName.Size = new System.Drawing.Size(809, 118);
+            this.labelProductName.TabIndex = 6;
+            this.labelProductName.Text = "Nombre del producto";
             // 
-            // label5
+            // labelProductPrice
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Heebo", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Khaki;
-            this.label5.Location = new System.Drawing.Point(564, 898);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(305, 118);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Precio:";
+            this.labelProductPrice.AutoSize = true;
+            this.labelProductPrice.Font = new System.Drawing.Font("Heebo", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProductPrice.ForeColor = System.Drawing.Color.Khaki;
+            this.labelProductPrice.Location = new System.Drawing.Point(564, 898);
+            this.labelProductPrice.Name = "labelProductPrice";
+            this.labelProductPrice.Size = new System.Drawing.Size(305, 118);
+            this.labelProductPrice.TabIndex = 7;
+            this.labelProductPrice.Text = "Precio:";
             // 
-            // label6
+            // labelErrorTitle
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Heebo", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Khaki;
-            this.label6.Location = new System.Drawing.Point(1676, 167);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(982, 235);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Lo sentimos";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelErrorTitle.AutoSize = true;
+            this.labelErrorTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelErrorTitle.Font = new System.Drawing.Font("Heebo", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorTitle.ForeColor = System.Drawing.Color.Khaki;
+            this.labelErrorTitle.Location = new System.Drawing.Point(1676, 167);
+            this.labelErrorTitle.Name = "labelErrorTitle";
+            this.labelErrorTitle.Size = new System.Drawing.Size(982, 235);
+            this.labelErrorTitle.TabIndex = 8;
+            this.labelErrorTitle.Text = "Lo sentimos";
+            this.labelErrorTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // labelErrorText
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Heebo", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(1874, 385);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(546, 118);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Hubo un error";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelErrorText.AutoSize = true;
+            this.labelErrorText.Font = new System.Drawing.Font("Heebo", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorText.ForeColor = System.Drawing.Color.White;
+            this.labelErrorText.Location = new System.Drawing.Point(1874, 385);
+            this.labelErrorText.Name = "labelErrorText";
+            this.labelErrorText.Size = new System.Drawing.Size(546, 118);
+            this.labelErrorText.TabIndex = 9;
+            this.labelErrorText.Text = "Hubo un error";
+            this.labelErrorText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -172,16 +172,16 @@ namespace Verificador_Precios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(2320, 1100);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelErrorText);
+            this.Controls.Add(this.labelErrorTitle);
+            this.Controls.Add(this.labelProductPrice);
+            this.Controls.Add(this.labelProductName);
+            this.Controls.Add(this.labelText);
+            this.Controls.Add(this.pictureLogo);
+            this.Controls.Add(this.pictureProduct);
+            this.Controls.Add(this.labelProductDesc);
+            this.Controls.Add(this.pictureCodebar);
+            this.Controls.Add(this.labelTitle);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -190,9 +190,9 @@ namespace Verificador_Precios
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCodebar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,18 +200,18 @@ namespace Verificador_Precios
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureLogo;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.PictureBox pictureCodebar;
+        private System.Windows.Forms.Label labelProductDesc;
+        private System.Windows.Forms.PictureBox pictureProduct;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelText;
+        private System.Windows.Forms.Label labelProductName;
+        private System.Windows.Forms.Label labelProductPrice;
+        private System.Windows.Forms.Label labelErrorTitle;
+        private System.Windows.Forms.Label labelErrorText;
     }
 }
 
